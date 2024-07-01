@@ -1,0 +1,75 @@
+{{template "header" .}}
+<main class="w-full h-full">
+  <div class="flex flex-col items-center justify-center m-4 lg:flex-row">
+    <div class="flex flex-col items-center justify-center p-4 m-4">
+      <h1 class="pb-4 text-xl font-bold">
+        Bienvenue sur le site de O'Coffee !
+      </h1>
+      <p class="pb-4">
+        Jean et Jacques Pepper, deux frères passionnés par le café, sont les
+        fondateurs de notre boutique.
+      </p>
+      <p>
+        Avec une expertise approfondie et un amour profond pour cette délicieuse
+        boisson, ils ont créé un espace où le café est célébré comme une
+        expérience raffinée et inspirante.
+      </p>
+      <button
+        class="p-4 px-8 mt-8 text-white shadow-lg bg-[#C68E17] rounded-xl"
+      >
+        <a class="text-xl font-bold" href="/catalog"
+          >Voir notre catalogue<i class="pl-4 fa-solid fa-arrow-right"></i
+        ></a>
+      </button>
+    </div>
+    <div class="flex items-center justify-center m-4">
+      <img
+        src="/images/home-coffee.jpg"
+        class="w-[1550px] rounded-lg shadow-lg"
+        alt="Café"
+      />
+    </div>
+  </div>
+</main>
+
+<!-- Nouveautés -->
+<div class="news-section">
+  <h1 class="pl-12 mb-4 text-4xl text-left mt-11">
+    Découvrez nos nouveaux produits
+  </h1>
+  <div
+    class="grid grid-cols-1 gap-8 p-12 mx-auto sm:grid-cols-2 lg:grid-cols-3 justify-items-center"
+  >
+    <!-- <% recentCoffees.forEach((coffee) => { %>
+    <section
+      class="flex flex-col items-center justify-between max-w-sm text-center bg-white border rounded-lg shadow-lg hover:scale-105"
+    >
+      <div class="flex-grow">
+        <img
+          src="/images/coffees/<%= coffee.reference %>.png"
+          class="object-cover w-full mb-4 rounded-t-lg h-60"
+          alt="Café 1"
+        />
+        <h3 class="mb-4 text-xl font-semibold"><%= coffee.name %></h3>
+        <p class="mx-8"><%= coffee.description %></p>
+      </div>
+      <button
+        class="mt-6 bg-[#C68E17] text-white py-2 px-8 mx-2 mb-4 rounded-lg w-auto hover:bg-amber-900"
+      >
+        <a href="/produit/<%= coffee.id %>" class="block text-center text-white"
+          >Voir ce produit <i class="pl-4 fa-solid fa-arrow-right"></i
+        ></a>
+      </button>
+      <button
+        class="mt-6 bg-[#C68E17] text-white py-2 px-8 mx-2 mb-4 max-w-lg rounded-lg hover:bg-amber-900"
+      >
+        <a
+          href="/panier/add/<%= coffee.id %>"
+          class="block text-center text-white"
+          >Ajout au panier <i class="fa-solid fa-cart-shopping"></i
+        ></a>
+      </button>
+    </section>
+    <% }); %> -->
+  </div>
+</div>

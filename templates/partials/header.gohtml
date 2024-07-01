@@ -1,0 +1,45 @@
+{{define "header"}}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/output.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/79b181438b.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>O'Coffee</title>
+  </head>
+  <body>
+    <header
+      class="flex flex-col items-center justify-between px-4 border-b-2 shadow-lg lg:flex-row"
+    >
+      <div class="items-baseline">
+        <a href="/" class="flex items-center"
+          ><img
+            src="/images/image.png"
+            class="w-[100px] h-[80px] m-4 items-baseline"
+            alt="O'Coffee"
+          />
+          <h1 class="px-4 text-2xl font-bold tracking-tight">O'Coffee</h1></a
+        >
+      </div>
+      <nav class="flex m-4">
+        <ul class="flex">
+          <li class="px-4 hover:scale-105 hover:underline">
+            <a href="/">Accueil</a>
+          </li>
+          <li class="px-4 hover:scale-105 hover:underline">
+            <a href="/catalog">Catalogue</a>
+          </li>
+          <li class="px-4 hover:scale-105 hover:underline">
+            <a href="/panier">Panier</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>
+{{ end }}
