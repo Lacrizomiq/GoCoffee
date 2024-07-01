@@ -1,0 +1,39 @@
+version: "3.9"
+
+services:
+  # Notre application Go
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - DATABASE_URL=postgres://baloo:junglebook@db:5432/gocoffee?sslmode=disable
+    depends_on:
+      - db
+
+  # Notre base de données Postgres
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: baloo
+      POSTGRES_PASSWORD: junglebook
+      POSTGRES_DB: gocoffee
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  # Adminer fournit une interface web pour se connecter aux bases de données
+  adminer:
+    image: adminer
+    restart: always
+    environment:
+      ADMINER_DESIGN: dracula
+    ports:
+      - 3333:8080
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:
